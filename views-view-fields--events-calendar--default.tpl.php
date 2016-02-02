@@ -21,6 +21,6 @@
     <p><?php print $fields['field_npf_event_description']->content; ?></p>
   </div>
   <div class="event-right">
-    <?php print $fields['field_npf_event_venue_map']->content; ?>
+    <?php print $fields['field_event_location_map']->content; ?>
   </div>
 </div></a>
