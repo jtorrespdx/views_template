@@ -1,8 +1,9 @@
 <?php
-  // dpm($fields);
+  dpm($fields);
 
   $type = str_replace(" ", "-", $fields['field_npf_event_type']->content);
   $type = strtolower(str_replace(array("<span>","</span>"),"",$type));
+
 ?>
 
 <div class="calendar-desktop">
@@ -42,8 +43,11 @@
 
       <address><strong><?php print $fields['field_npf_event_venue_name']->content; ?></strong>
       <?php print $fields['field_npf_event_venue_address']->content; ?></address>
+      <!-- This map link is broken and doesn't work yet! -->
+      <a target = "blank" href="http://maps.google.com/?q="+"<?php print $address_string ?>">Map</a>
 
       <p><?php print $fields['field_npf_event_description']->content; ?></p>
+      <a target = "blank" href ="<?php print str_replace(array("<div>", "</div>"),"", $fields['field_npf_event_url']->content); ?>">Learn More</a>
     </div>
   </div>
 </div>
