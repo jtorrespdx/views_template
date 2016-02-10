@@ -38,20 +38,20 @@
 <!-- Mobile Layout -->
 <div class="calendar-mobile">
   <div class="event-mobile-container">
-    <div class="mobile-left">
+    <div class="mobile-logo">
       <img src="/sites/default/files/calendar/<?php print $type ?>.jpg" alt="<?php print $type; ?>">
     </div>
 
-    <div class="mobile-right">
+    <div class="mobile-event-content">
       <h2><strong><?php print $fields['title']->content; ?></strong></h2>
       <h3><?php print $fields['field_npf_event_date']->content; ?><h3>
 
       <address><strong><?php print $fields['field_npf_event_venue_name']->content; ?></strong>
       <?php print $fields['field_npf_event_venue_address']->content; ?></address>
-      <a target = "blank" href="http://maps.google.com/?q=<?php print $location_coordinates; ?>">Map</a>
+      <a class="map-button btn btn-info" target = "blank" href="http://maps.google.com/?q=<?php print $location_coordinates; ?>">Map</a>
 
       <p><?php print $fields['field_npf_event_description']->content; ?></p>
-      <a target = "blank" href ="<?php print $url; ?>">Learn More</a>
+      <a class="learn-more-button btn btn-warning" target = "blank" href ="<?php print $url; ?>">Learn More</a>
     </div>
   </div>
 </div>
